@@ -3,7 +3,7 @@ package com.llighter.estateservice.model;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
-가
+
 public class Customer {
 
     @Id
