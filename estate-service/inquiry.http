@@ -1,0 +1,15 @@
+### advanced inquiry 요청
+POST http://localhost:8080/v1/seoul-real-estate/advance-inquiry
+Content-Type: application/json
+
+{
+  "requestNumber": 202307001,
+  "agreedAt": "2021-07-01T00:00:00",
+  "name": "홍길동",
+  "dateOfBirth": "1990-01-01",
+  "mobile": "01012345678",
+  "realEstateTransactionType": "001",
+  "residentialType": "001",
+  "residenceDuration": "001",
+  "options": "001"
+}
