@@ -8,8 +8,8 @@ Content-Type: application/json
   "name": "홍길동",
   "dateOfBirth": "1990-01-01",
   "mobile": "01012345678",
-  "realEstateTransactionType": "001",
-  "residentialType": "001",
-  "residenceDuration": "001",
+  "tradeType": "001",
+  "houseType": "001",
+  "residencePeriod": "001",
   "options": "001"
 }
