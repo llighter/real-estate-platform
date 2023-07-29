@@ -8,9 +8,9 @@ public record AdvancedInquiry(
         String name,
         String dateOfBirth,
         String mobile,
-        String realEstateTransactionType,
-        String residentialType,
-        String residenceDuration,
+        String tradeType,
+        String houseType,
+        String residencePeriod,
         String options
 ) {
 
