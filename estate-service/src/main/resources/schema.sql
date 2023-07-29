@@ -22,3 +22,15 @@ create table Items (
     updated_date timestamp not null
 );
 
+-- AffiliateCustomerManagement
+create table AFFILIATE_CUSTOMER_MANAGEMENT (
+    id int auto_increment primary key,
+    progress_step varchar(255) not null,
+    customer_id int not null,
+    item_id int not null,
+    created_date timestamp not null,
+    updated_date timestamp not null,
+    foreign key (customer_id) references Customer(id),
+    foreign key (item_id) references Items(id)
+);
+
