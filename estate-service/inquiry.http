@@ -13,3 +13,39 @@ Content-Type: application/json
   "residencePeriod": "001",
   "options": "001"
 }
+
+### apply 요청
+POST http://localhost:8080/v1/seoul-real-estate/apply
+Content-Type: application/json
+
+{
+  "requestNumber": 202307001,
+  "affiliateCustomerManagementNumber": 2
+}
+
+### apply 오류(존재하지 않는 신청번호)
+POST http://localhost:8080/v1/seoul-real-estate/apply
+Content-Type: application/json
+
+{
+  "requestNumber": 202307001,
+  "affiliateCustomerManagementNumber": 1
+}
+
+### apply 오류(필수값 누락)
+POST http://localhost:8080/v1/seoul-real-estate/apply
+Content-Type: application/json
+
+{
+  "requestNumber": 202307001,
+  "affiliateCustomerManagementNumber": null
+}
+
+### apply 오류(신청 가능 상태가 아님)
+POST http://localhost:8080/v1/seoul-real-estate/apply
+Content-Type: application/json
+
+{
+  "requestNumber": 202307001,
+  "affiliateCustomerManagementNumber": 1
+}
