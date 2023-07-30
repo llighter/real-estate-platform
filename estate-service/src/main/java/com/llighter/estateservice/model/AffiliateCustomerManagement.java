@@ -35,7 +35,12 @@ public class AffiliateCustomerManagement {
 
     // 신청 요청이 들어오면 진행단계를 신청으로 변경
     public void apply() {
-        this.progressStep = "003";
+        // 신청가능한 상태(조회)인 경우 신청처리를 진행하고 아닌 경우 예외처리
+        if (this.progressStep.equals("001")) {
+            this.progressStep = "003";
+        } else {
+            throw new IllegalStateException("신청할 수 없는 상태입니다.");
+        }
     }
 
     // 승인 요청이 들어오면 진행단계를 승인으로 변경
